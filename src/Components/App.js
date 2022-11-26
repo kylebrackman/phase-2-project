@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar"
+import Home from "./Home"
 import ClimbsPage from "./ClimbsPage"
 import { Route, Switch } from "react-router-dom";
 
@@ -13,9 +14,12 @@ function App() {
           <ClimbsPage />
         </Route>
         <Route exact path="/">
-          <div>Home</div>
+          <Home />
         </Route>
       </Switch>
+      <Route path="/about">
+        <div>About Page</div>
+      </Route>
     </div>
   );
 }
