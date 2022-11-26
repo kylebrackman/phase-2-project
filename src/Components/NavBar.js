@@ -8,7 +8,15 @@ function NavBar() {
             paddingBottom: "10px",
             marginBottom: "12px",
         }}>
-            Test
+            <NavLink style={{ marginRight: "10px" }} to="/">
+                Home
+            </NavLink>
+            <NavLink style={{ marginRight: "10px" }} to="/climbs">
+                Climbs
+            </NavLink>
+            <NavLink style={{ marginRight: "10px" }} to="about">
+                About
+            </NavLink>
         </div>
     )
 }
