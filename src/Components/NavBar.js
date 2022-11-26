@@ -14,7 +14,7 @@ function NavBar() {
             <NavLink style={{ marginRight: "10px" }} to="/climbs">
                 Climbs
             </NavLink>
-            <NavLink style={{ marginRight: "10px" }} to="about">
+            <NavLink style={{ marginRight: "10px" }} to="/about">
                 About
             </NavLink>
         </div>
