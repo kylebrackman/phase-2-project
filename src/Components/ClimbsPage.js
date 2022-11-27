@@ -2,7 +2,10 @@ import React from "react";
 
 function ClimbsPage() {
     return (
-        "Climbs Page"
+        <form>
+            <input type="text"/>
+            <button>Submit</button>
+        </form>
     )
 }
 

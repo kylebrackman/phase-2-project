@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar"
 import Home from "./Home"
+import About from "./About"
 import ClimbsPage from "./ClimbsPage"
 import { Route, Switch } from "react-router-dom";
 
@@ -10,7 +11,7 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/climbs">
+        <Route path="/climbspage">
           <ClimbsPage />
         </Route>
         <Route exact path="/">
@@ -18,7 +19,7 @@ function App() {
         </Route>
       </Switch>
       <Route path="/about">
-        <div>About Page</div>
+        <About />
       </Route>
     </div>
   );
