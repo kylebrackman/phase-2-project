@@ -1,6 +1,6 @@
 import React from "react";
 import {Button} from "../StyledComponents"
-
+import {H1} from "../StyledComponents"
 import { NavLink } from "react-router-dom";
 
 function NavBar() {

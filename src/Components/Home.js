@@ -13,7 +13,7 @@ function Home() {
             marginBottom: "12px",
         }}
         >
-           <H1>Climb</H1> 
+           <H1>climb.com</H1>
         </div>
     )
 }
