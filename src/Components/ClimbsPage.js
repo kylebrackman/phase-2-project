@@ -1,38 +1,94 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import { H2, H3, P1 } from "../StyledComponents"
+import ClimbForm from "./ClimbForm"
 
-function ClimbsPage() {
-    const [climbs, setClimb] = useState("Climb Name")
-    const [description, setDescription] = useState("Description")
-    
-    useEffect(() => {
-        fetch("http://localhost:3000/climbs")
-        .then((res) => res.json())
-        .then((data) => {
-            setClimb(data)
-        })
-    }, [])
 
-    function logClimbs(e) {
-        e.preventDefault()
-        console.log(climbs)
-    }
+function ClimbsPage({ climbs, climbName, setClimbName }) {
 
-    // const climbsList = climbs.map((climb) => {
-    //     <p key={climb.id}>{climb}</p>
-    // })
+    function handleClimbName(event) {
+        setClimbName(event.target.value);
+      }
+
+    const climbsList = climbs.map(climb => {
+        return (
+            <div style={{
+                alignItems: 'center',
+                paddingBottom: "10px",
+                marginBottom: "12px",
+            }}>
+                <P1 style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    paddingBottom: "10px",
+                    marginBottom: "12px",
+                }}>Climb Name: {climb.name}</P1>
+                <p
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        paddingBottom: "10px",
+                        marginBottom: "12px",
+                    }}>Description: {climb.description}</p>
+                <p
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        paddingBottom: "10px",
+                        marginBottom: "12px",
+                    }}>Grade: {climb.grade}</p>
+                <p style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    borderBottom: "1px solid black",
+                    marginLeft: "-50px",
+                    paddingBottom: "10px",
+                    marginBottom: "12px",
+                }}></p>
+            </div>
+        )
+    })
 
     return (
-        <div>
-            <form>
-                <input type="text" value={climbs}/>
-                <input type="text" value={description}/>
-                <select>
-                    <option>Grade</option>
-                    <option>5.0</option>
-                </select>
-                <button>Submit</button>
-                <button onClick={logClimbs}>Test</button>
-            </form>
+        <div >
+            <H2 style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                paddingBottom: "10px",
+                marginBottom: "12px",
+            }}>🏔Submit a New Climb!🏔</H2>
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                borderBottom: "3px solid black",
+                paddingBottom: "10px",
+                marginBottom: "12px",
+            }}>
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    paddingBottom: "10px",
+                    marginBottom: "12px",
+                }}>
+                    <ClimbForm />
+                </div>
+            </div>
+            <H3 style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                paddingBottom: "10px",
+                marginBottom: "12px",
+            }}>Climbs List</H3>
+            {climbsList}
         </div>
     )
 }
