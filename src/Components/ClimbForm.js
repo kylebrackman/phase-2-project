@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function ClimbForm({updateClimbList}) {
+function ClimbForm({onAddClimb}) {
     
     const [climbName, setClimbName] = useState("")
     const [description, setDescription] = useState("")
@@ -21,7 +21,7 @@ function ClimbForm({updateClimbList}) {
             body: JSON.stringify(climbData)
         })
         .then(res => res.json())
-        .then((newClimb) => console.log(newClimb))
+        .then((newClimb) => onAddClimb(newClimb))
       }
 
     return (
@@ -56,7 +56,6 @@ function ClimbForm({updateClimbList}) {
                 <option>5.12</option>
                 <option>5.13</option>
                 <option>5.14</option>
-                <option>5.15</option>
                 <option>5.15</option>
             </select>
             <button>Submit</button>

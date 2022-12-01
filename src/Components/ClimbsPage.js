@@ -5,9 +5,13 @@ import ClimbForm from "./ClimbForm"
 
 function ClimbsPage({ climbList, updateClimbList }) {
 
+    function handleAddClimb(newClimb) {
+        updateClimbList([...climbList, newClimb]);
+      }
+
     const climbsListed = climbList.map(climb => {
         return (
-            <div key={climb.name} style={{ alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
+            <div key={climb.id} style={{ alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
                 <P1 style={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -69,7 +73,7 @@ function ClimbsPage({ climbList, updateClimbList }) {
                     paddingBottom: "10px",
                     marginBottom: "12px",
                 }}>
-                    <ClimbForm updateClimbList={updateClimbList} />
+                    <ClimbForm onAddClimb={handleAddClimb}/>
                 </div>
             </div>
             <H3 style={{
