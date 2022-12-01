@@ -29,7 +29,7 @@ function App() {
           <Route path="/climbspage">
             <ClimbsPage
             climbList={climbList}
-            setClimbList={setClimbList}
+            updateClimbList={setClimbList}
             />
           </Route>
           <Route exact path="/">

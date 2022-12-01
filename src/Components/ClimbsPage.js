@@ -3,11 +3,7 @@ import { H2, H3, P1 } from "../StyledComponents"
 import ClimbForm from "./ClimbForm"
 
 
-function ClimbsPage({ climbList, setClimbList }) {
-
-    // function handleClimbName(event) {
-    //     setClimbList(event.target.value);
-    //   }
+function ClimbsPage({ climbList, updateClimbList }) {
 
     const climbsListed = climbList.map(climb => {
         return (
@@ -77,7 +73,7 @@ function ClimbsPage({ climbList, setClimbList }) {
                     paddingBottom: "10px",
                     marginBottom: "12px",
                 }}>
-                    <ClimbForm />
+                    <ClimbForm updateClimbList={updateClimbList}/>
                 </div>
             </div>
             <H3 style={{

@@ -1,17 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 
-function ClimbForm() {
+function ClimbForm({updateClimbList}) {
+    
+    const [climbName, setClimbName] = useState("")
+    const [selectedGrade, setSelectedGrade] = useState("Grade")
+    const [description, setDescription] = useState("")
+
+    function handleUpdateList(e) {
+        e.preventDefault();
+        console.log("name:", climbName);
+        console.log("grade:", selectedGrade);
+      }
+
     return (
-        <form style={{
+        <form
+        type="text"
+        className="NewClimb"
+        onSubmit={handleUpdateList}
+        style={{
             display: 'flex',
             alignItems: 'center',
             borderBottom: "2px solid black",
             paddingBottom: "10px",
             marginBottom: "12px",
         }}>
+            <input type="text" value={climbName} onChange={(e) => setClimbName(e.target.value)}/>
             <input type="text" />
-            <input type="text" />
-            <select>
+            <select name="Grade" value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value)}
+>
                 <option>Grade</option>
                 <option>5.0</option>
                 <option>5.1</option>
