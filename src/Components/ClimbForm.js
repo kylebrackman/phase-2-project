@@ -3,13 +3,25 @@ import React, {useState} from "react";
 function ClimbForm({updateClimbList}) {
     
     const [climbName, setClimbName] = useState("")
-    const [selectedGrade, setSelectedGrade] = useState("Grade")
     const [description, setDescription] = useState("")
+    const [selectedGrade, setSelectedGrade] = useState("Grade")
 
     function handleUpdateList(e) {
         e.preventDefault();
-        console.log("name:", climbName);
-        console.log("grade:", selectedGrade);
+        const climbData = {
+            name: climbName,
+            description: description,
+            grade: selectedGrade
+        }
+        fetch("http://localhost:3000/climbs", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(climbData)
+        })
+        .then(res => res.json())
+        .then((newClimb) => console.log(newClimb))
       }
 
     return (
@@ -25,7 +37,7 @@ function ClimbForm({updateClimbList}) {
             marginBottom: "12px",
         }}>
             <input type="text" value={climbName} onChange={(e) => setClimbName(e.target.value)}/>
-            <input type="text" />
+            <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
             <select name="Grade" value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value)}
 >
                 <option>Grade</option>

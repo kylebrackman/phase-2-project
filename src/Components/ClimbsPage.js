@@ -7,11 +7,7 @@ function ClimbsPage({ climbList, updateClimbList }) {
 
     const climbsListed = climbList.map(climb => {
         return (
-            <div style={{
-                alignItems: 'center',
-                paddingBottom: "10px",
-                marginBottom: "12px",
-            }}>
+            <div key={climb.name} style={{ alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
                 <P1 style={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -28,7 +24,7 @@ function ClimbsPage({ climbList, updateClimbList }) {
                         justifyContent: 'center',
                         paddingBottom: "10px",
                         marginBottom: "12px",
-                    }}>Description: {climb.description}</p>
+                    }}>Grade: {climb.grade}</p>
                 <p
                     style={{
                         display: 'flex',
@@ -37,7 +33,7 @@ function ClimbsPage({ climbList, updateClimbList }) {
                         justifyContent: 'center',
                         paddingBottom: "10px",
                         marginBottom: "12px",
-                    }}>Grade: {climb.grade}</p>
+                    }}>Description: {climb.description}</p>
                 <p style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -73,7 +69,7 @@ function ClimbsPage({ climbList, updateClimbList }) {
                     paddingBottom: "10px",
                     marginBottom: "12px",
                 }}>
-                    <ClimbForm updateClimbList={updateClimbList}/>
+                    <ClimbForm updateClimbList={updateClimbList} />
                 </div>
             </div>
             <H3 style={{
