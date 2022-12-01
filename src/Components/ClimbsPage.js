@@ -3,13 +3,13 @@ import { H2, H3, P1 } from "../StyledComponents"
 import ClimbForm from "./ClimbForm"
 
 
-function ClimbsPage({ climbs, climbName, setClimbName }) {
+function ClimbsPage({ climbList, setClimbList }) {
 
-    function handleClimbName(event) {
-        setClimbName(event.target.value);
-      }
+    // function handleClimbName(event) {
+    //     setClimbList(event.target.value);
+    //   }
 
-    const climbsList = climbs.map(climb => {
+    const climbsListed = climbList.map(climb => {
         return (
             <div style={{
                 alignItems: 'center',
@@ -88,7 +88,7 @@ function ClimbsPage({ climbs, climbName, setClimbName }) {
                 paddingBottom: "10px",
                 marginBottom: "12px",
             }}>Climbs List</H3>
-            {climbsList}
+            {climbsListed}
         </div>
     )
 }

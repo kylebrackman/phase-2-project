@@ -8,19 +8,17 @@ import { Route, Switch } from "react-router-dom";
 
 
 function App() {
-  const [climbs, setClimbs] = useState("Climb Name")
+  const [climbList, setClimbList] = useState([])
   const [loggedIn, setLoggedIn] = useState(false)
   const [userName, setUserName] = useState("")
-  const [climbName, setClimbName] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:3000/climbs")
       .then((res) => res.json())
       .then((data) => {
-        setClimbs(data)
+        setClimbList(data)
       })
   }, [])
-
 
 
   if (loggedIn) {
@@ -30,10 +28,9 @@ function App() {
         <Switch>
           <Route path="/climbspage">
             <ClimbsPage
-            climbs={climbs}
-            setClimbs={setClimbs}
-            climbName={climbName}
-            setClimbName={setClimbName}/>
+            climbList={climbList}
+            setClimbList={setClimbList}
+            />
           </Route>
           <Route exact path="/">
             <Home userName={userName} />
