@@ -1,12 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-function ClimbForm({onAddClimb}) {
-    
+function ClimbForm({ onAddClimb }) {
+
     const [climbName, setClimbName] = useState("")
     const [description, setDescription] = useState("")
     const [selectedGrade, setSelectedGrade] = useState("Grade")
 
     function handleUpdateList(e) {
+
         e.preventDefault();
         const climbData = {
             name: climbName,
@@ -20,26 +21,47 @@ function ClimbForm({onAddClimb}) {
             },
             body: JSON.stringify(climbData)
         })
-        .then(res => res.json())
-        .then((newClimb) => onAddClimb(newClimb))
-      }
+            .then(res => res.json())
+            .then((newClimb) => onAddClimb(newClimb))
+    }
 
     return (
-        <form
-        type="text"
-        className="NewClimb"
-        onSubmit={handleUpdateList}
-        style={{
-            display: 'flex',
-            alignItems: 'center',
-            borderBottom: "2px solid black",
-            paddingBottom: "10px",
-            marginBottom: "12px",
-        }}>
-            <input type="text" value={climbName} onChange={(e) => setClimbName(e.target.value)}/>
-            <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
-            <select name="Grade" value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value)}
->
+        <div>
+            <div>
+                <form
+                    type="text"
+                    className="ClimbName"
+                    onSubmit={handleUpdateList}>
+                    <label style={{
+                        paddingRight: 43,
+                        paddingBottom: 100
+                    }}
+                    >Climb Name</label>
+                    <input
+                        style={{
+                            width: 300
+                        }} type="text" value={climbName} onChange={(e) => setClimbName(e.target.value)} />
+                    <button>Submit</button>
+                </form>
+                <label style={{
+                    paddingRight: 50
+                }}>Description</label>
+                <input multiline={true}
+                    style={{
+                        width: 300,
+                        height: 50,
+                        textAlignVertical: 'top',
+                        
+                    }}
+                    type="text"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)} />
+            </div>
+            <label
+                style={{
+                    paddingRight: 42
+                }}>Climb Grade</label>
+            <select name="Grade" value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value)}>
                 <option>Grade</option>
                 <option>5.0</option>
                 <option>5.1</option>
@@ -58,8 +80,7 @@ function ClimbForm({onAddClimb}) {
                 <option>5.14</option>
                 <option>5.15</option>
             </select>
-            <button>Submit</button>
-        </form>
+        </div>
     )
 }
 
