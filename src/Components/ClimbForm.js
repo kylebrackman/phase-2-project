@@ -46,14 +46,13 @@ function ClimbForm({ onAddClimb }) {
                 <label style={{
                     paddingRight: 50
                 }}>Description</label>
-                <input multiline={true}
+                <input
                     style={{
                         width: 300,
                         height: 50,
-                        textAlignVertical: 'top',
-                        
+                        textAlign: '-moz-initial',  
                     }}
-                    type="text"
+                    type="textarea"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)} />
             </div>

@@ -32,9 +32,6 @@ function LoginPage({ handleLogIn, userName, setUserName }) {
                 <H3
                     style={{
                         display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        justifyContent: 'center',
                         paddingBottom: "10px",
                         marginBottom: "12px",
                     }}>Log In</H3>

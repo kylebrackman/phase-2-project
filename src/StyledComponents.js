@@ -30,7 +30,7 @@ align-items: 'center';
 `
 export const H3 = styled.h3`
 color: white;
-font-size: 50px;
+font-size: 40px;
 font-family: "klavica";
 `
 export const P1 = styled.p`

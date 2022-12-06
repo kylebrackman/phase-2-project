@@ -20,6 +20,10 @@ function App() {
       })
   }, [])
 
+  function handleAddClimb(newClimb) {
+    setClimbList([...climbList, newClimb]);
+  }
+
 
   if (loggedIn) {
     return (
@@ -28,17 +32,17 @@ function App() {
         <Switch>
           <Route path="/climbspage">
             <ClimbsPage
-            climbList={climbList}
-            updateClimbList={setClimbList}
+              climbList={climbList}
+              handleAddClimb={handleAddClimb}
             />
           </Route>
           <Route exact path="/">
             <Home userName={userName} />
           </Route>
+          <Route path="/about">
+            <About />
+          </Route>
         </Switch>
-        <Route path="/about">
-          <About />
-        </Route>
       </div>
     );
   }

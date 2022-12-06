@@ -3,23 +3,23 @@ import { H2, H3, P1 } from "../StyledComponents"
 import ClimbForm from "./ClimbForm"
 
 
-function ClimbsPage({ climbList, updateClimbList }) {
+function ClimbsPage({ climbList, handleAddClimb }) {
 
-    function handleAddClimb(newClimb) {
-        updateClimbList([...climbList, newClimb]);
-      }
+      const p1Styling = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingBottom: "10px",
+        marginBottom: "12px",
+    }
 
     const climbsListed = climbList.map(climb => {
         return (
-            <div key={climb.id} style={{ alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
-                <P1 style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    paddingBottom: "10px",
-                    marginBottom: "12px",
-                }}>Climb Name: {climb.name}</P1>
+            <div key={climb.id} style={{wordWrap: 'true', alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
+                <P1 style={
+                    p1Styling
+                }>Climb Name: {climb.name}</P1>
                 <p
                     style={{
                         display: 'flex',
