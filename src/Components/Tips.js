@@ -1,5 +1,5 @@
 import React from "react";
-import { H2, OL, LI, padding1 } from "../StyledComponents"
+import { H2, OL, LI } from "../StyledComponents"
 
 
 function Tips() {
