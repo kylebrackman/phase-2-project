@@ -14,7 +14,7 @@ function Home({ userName }) {
                 marginBottom: "12px",
             }}
             >
-                <H1>🏔Welcome to climb.com !🏔</H1>
+                <H1>🏔Welcome to ClimbTalk.com !🏔</H1>
             </div>
             <H2 style={{
                 display: 'flex',

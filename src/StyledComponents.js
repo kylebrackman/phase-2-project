@@ -17,12 +17,12 @@ display: 'flex';
 justify-content: 'center';
 align-items: 'center';
 color: white;
-font-size: 100px;
+font-size: 90px;
 font-family: "klavica";
 `
 export const H2 = styled.h2`
 color: white;
-font-size: 75px;
+font-size: 60px;
 font-family: "klavica";
 display: 'flex';
 justify-content: 'center';

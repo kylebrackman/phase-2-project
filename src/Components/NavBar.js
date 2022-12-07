@@ -1,6 +1,6 @@
 import React from "react";
-import {Button} from "../StyledComponents"
-import {H1} from "../StyledComponents"
+import { Button } from "../StyledComponents"
+import { H1 } from "../StyledComponents"
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
@@ -22,7 +22,10 @@ function NavBar() {
                 <Button>Climbs</Button>
             </NavLink>
             <NavLink style={{ marginRight: "10px" }} to="/about">
-            <Button>About</Button>
+                <Button>About</Button>
+            </NavLink>
+            <NavLink style={{ marginRight: "10px" }} to="/tips">
+                <Button>Tips</Button>
             </NavLink>
         </div>
     )

@@ -50,7 +50,7 @@ function ClimbForm({ onAddClimb }) {
                     style={{
                         width: 300,
                         height: 50,
-                        textAlign: '-moz-initial',  
+                        textAlign: 'top',  
                     }}
                     type="textarea"
                     value={description}
