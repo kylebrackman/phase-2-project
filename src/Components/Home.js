@@ -2,6 +2,7 @@ import React from "react";
 import { H1, H2 } from "../StyledComponents"
 
 function Home({ userName }) {
+
     return (
         <div>
             <div>

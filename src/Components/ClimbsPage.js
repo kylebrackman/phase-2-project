@@ -30,7 +30,7 @@ function ClimbsPage({ climbList, handleAddClimb }) {
 
     const climbsListed = climbList.map(climb => {
         return (
-            <div key={climb.id} style={{ wordWrap: 'true', alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
+            <div key={climb.id} style={{ alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
                 <P1 style={p1Styling}>Climb Name: {climb.name}</P1>
                 <p style={p1Styling}>Grade: {climb.grade}</p>
                 <p style={p1Styling}>Description: {climb.description}</p>

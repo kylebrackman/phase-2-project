@@ -37,6 +37,12 @@ export const P1 = styled.p`
 color: white;
 font-size: 25px;
 font-family: "klavica";
+/* display: 'flex';
+justify-Content: 'center';
+align-Items: 'center';
+justify-Content: 'center';
+padding-Bottom: "10px";
+margin-Bottom: 12px; */
 `
 
 export const OL = styled.ol`

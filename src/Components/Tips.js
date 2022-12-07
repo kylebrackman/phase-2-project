@@ -1,5 +1,5 @@
 import React from "react";
-import { H2, OL, LI } from "../StyledComponents"
+import { H2, OL, LI, padding1 } from "../StyledComponents"
 
 
 function Tips() {
@@ -10,6 +10,7 @@ function Tips() {
                 <LI>Find a local climbing gym! The community is very friendly.</LI>
                 <LI>Try out some gear to figure out what you like. The most important items are harness, shoes, and a chalkbag!</LI>
                 <LI>If you plan on climbing outside, make sure to buy a helmet!</LI>
+                <LI>Start on easy climbs, which are generally rated around 5.6-5.8 indoors!</LI>
             </OL>
         </div>
     )

@@ -43,13 +43,13 @@ function LoginPage({ handleLogIn, userName, setUserName }) {
                 <button type="submit" onClick={handleLogIn}>Login</button>
             </form>
             <H1 style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingBottom: "10px",
-                        marginBottom: "12px",
-                    }}>🏔Welcome to climb.com !🏔</H1>
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
+                paddingBottom: "10px",
+                marginBottom: "12px",
+            }}>🏔Welcome to climb.com !🏔</H1>
         </div>
     )
 }
