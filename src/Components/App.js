@@ -4,6 +4,7 @@ import Home from "./Home"
 import About from "./About"
 import ClimbsPage from "./ClimbsPage"
 import LoginPage from "./LoginPage"
+import Tips from "./Tips"
 import { Route, Switch } from "react-router-dom";
 
 
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/tips">
+            <Tips />
           </Route>
         </Switch>
       </div>
