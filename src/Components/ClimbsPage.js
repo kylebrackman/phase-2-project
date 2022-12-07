@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { H2, H3, P1 } from "../StyledComponents"
 import ClimbForm from "./ClimbForm"
 
 
 function ClimbsPage({ climbList, handleAddClimb }) {
 
-      const p1Styling = {
+    const p1Styling = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -13,77 +13,41 @@ function ClimbsPage({ climbList, handleAddClimb }) {
         paddingBottom: "10px",
         marginBottom: "12px",
     }
+    const headerStyling = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingBottom: "10px",
+        marginBottom: "12px",
+    }
+    const divStyling = {
+        display: 'flex',
+        alignItems: 'center',
+        paddingBottom: "10px",
+        marginBottom: "12px",
+    }
 
     const climbsListed = climbList.map(climb => {
         return (
-            <div key={climb.id} style={{wordWrap: 'true', alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
-                <P1 style={
-                    p1Styling
-                }>Climb Name: {climb.name}</P1>
-                <p
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingBottom: "10px",
-                        marginBottom: "12px",
-                    }}>Grade: {climb.grade}</p>
-                <p
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingBottom: "10px",
-                        marginBottom: "12px",
-                    }}>Description: {climb.description}</p>
-                <p style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    borderBottom: "1px solid black",
-                    marginLeft: "-50px",
-                    paddingBottom: "10px",
-                    marginBottom: "12px",
-                }}></p>
+            <div key={climb.id} style={{ wordWrap: 'true', alignItems: 'center', paddingBottom: "10px", marginBottom: "12px", }}>
+                <P1 style={p1Styling}>Climb Name: {climb.name}</P1>
+                <p style={p1Styling}>Grade: {climb.grade}</p>
+                <p style={p1Styling}>Description: {climb.description}</p>
+                <p style={{ borderBottom: "1px solid black" }}></p>
             </div>
         )
-    })
+    });
 
     return (
         <div >
-            <H2 style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingBottom: "10px",
-                marginBottom: "12px",
-            }}>🏔Submit a New Climb!🏔</H2>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                borderBottom: "3px solid black",
-                paddingBottom: "10px",
-                marginBottom: "12px",
-            }}>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    paddingBottom: "10px",
-                    marginBottom: "12px",
-                }}>
-                    <ClimbForm onAddClimb={handleAddClimb}/>
+            <H2 style={headerStyling}>🏔Submit a New Climb!🏔</H2>
+            <div style={{ divStyling, borderBottom: "3px solid black" }}>
+                <div style={divStyling}>
+                    <ClimbForm onAddClimb={handleAddClimb} />
                 </div>
             </div>
-            <H3 style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingBottom: "10px",
-                marginBottom: "12px",
-            }}>Climbs List</H3>
+            <H3 style={headerStyling}>Climbs List</H3>
             {climbsListed}
         </div>
     )

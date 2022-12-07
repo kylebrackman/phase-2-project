@@ -37,14 +37,14 @@ function App() {
               handleAddClimb={handleAddClimb}
             />
           </Route>
-          <Route exact path="/">
-            <Home userName={userName} />
-          </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/tips">
             <Tips />
+          </Route>
+          <Route exact path="/">
+            <Home userName={userName} />
           </Route>
         </Switch>
       </div>

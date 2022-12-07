@@ -36,5 +36,29 @@ font-family: "klavica";
 export const P1 = styled.p`
 color: white;
 font-size: 25px;
-font-family: "klavica"
+font-family: "klavica";
+`
+
+export const OL = styled.ol`
+color: white;
+font-size: 60px;
+font-family: "klavica";
+border-bottom: 2px solid black;
+`
+
+export const LI = styled.li`
+color: white;
+font-size: 30px;
+font-family: "klavica";
+list-style-position: inside;
+padding-bottom: 30px;
+`
+
+export const climbsBorder = styled.p`
+display: 'flex';
+align-Items: 'center';
+border-Bottom: "1px solid black";
+// marginLeft: "-50px";
+padding-Bottom: 10px;
+margin-bottom: 12px;
 `

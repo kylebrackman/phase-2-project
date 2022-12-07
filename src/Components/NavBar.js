@@ -21,11 +21,11 @@ function NavBar() {
             <NavLink style={{ marginRight: "10px" }} to="/climbspage">
                 <Button>Climbs</Button>
             </NavLink>
-            <NavLink style={{ marginRight: "10px" }} to="/about">
-                <Button>About</Button>
-            </NavLink>
             <NavLink style={{ marginRight: "10px" }} to="/tips">
                 <Button>Tips</Button>
+            </NavLink>
+            <NavLink style={{ marginRight: "10px" }} to="/about">
+                <Button>About</Button>
             </NavLink>
         </div>
     )
