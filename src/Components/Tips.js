@@ -11,6 +11,7 @@ function Tips() {
                 <LI>Try out some gear to figure out what you like. The most important items are harness, shoes, and a chalkbag!</LI>
                 <LI>If you plan on climbing outside, make sure to buy a helmet!</LI>
                 <LI>Start on easy climbs, which are generally rated around 5.6-5.8 indoors!</LI>
+                <LI>If you cannot find an experienced friend to take you, consider hiring a guide!</LI>
             </OL>
         </div>
     )
