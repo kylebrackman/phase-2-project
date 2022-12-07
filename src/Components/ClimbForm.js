@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
 function ClimbForm({ onAddClimb }) {
-
     const [climbName, setClimbName] = useState("")
     const [description, setDescription] = useState("")
     const [selectedGrade, setSelectedGrade] = useState("Grade")
 
     function handleUpdateList(e) {
-
         e.preventDefault();
         const climbData = {
             name: climbName,
@@ -46,12 +44,7 @@ function ClimbForm({ onAddClimb }) {
                 <label style={{
                     paddingRight: 50
                 }}>Description</label>
-                <input
-                    style={{
-                        width: 300,
-                        height: 50,
-                        textAlign: 'top',  
-                    }}
+                <input style={{ width: 300, height: 50 }}
                     type="textarea"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)} />
