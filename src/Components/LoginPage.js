@@ -49,7 +49,7 @@ function LoginPage({ handleLogIn, userName, setUserName }) {
                 justifyContent: 'center',
                 paddingBottom: "10px",
                 marginBottom: "12px",
-            }}>🏔Welcome to climb.com !🏔</H1>
+            }}>🏔Welcome to ClimbTalk.com !🏔</H1>
         </div>
     )
 }

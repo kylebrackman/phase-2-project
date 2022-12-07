@@ -21,6 +21,9 @@ function ClimbForm({ onAddClimb }) {
         })
             .then(res => res.json())
             .then((newClimb) => onAddClimb(newClimb))
+            setClimbName('')
+            setDescription('')
+            setSelectedGrade("Grade")
     }
 
     return (
@@ -30,15 +33,11 @@ function ClimbForm({ onAddClimb }) {
                     type="text"
                     className="ClimbName"
                     onSubmit={handleUpdateList}>
-                    <label style={{
-                        paddingRight: 43,
-                        paddingBottom: 100
-                    }}
-                    >Climb Name</label>
+                    <label style={{ paddingRight: 43, paddingBottom: 100 }} >
+                        Climb Name
+                    </label>
                     <input
-                        style={{
-                            width: 300
-                        }} type="text" value={climbName} onChange={(e) => setClimbName(e.target.value)} />
+                        style={{ width: 300 }} type="text" value={climbName} onChange={(e) => setClimbName(e.target.value)} />
                     <button>Submit</button>
                 </form>
                 <label style={{
