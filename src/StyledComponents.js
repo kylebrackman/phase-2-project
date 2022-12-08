@@ -44,6 +44,12 @@ justify-Content: 'center';
 padding-Bottom: "10px";
 margin-Bottom: 12px; */
 `
+export const P2 = styled.p`
+color: white;
+font-size: 30px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+`
+
 
 export const OL = styled.ol`
 color: white;
