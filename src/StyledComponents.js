@@ -55,7 +55,7 @@ border-bottom: 2px solid black;
 export const LI = styled.li`
 color: white;
 font-size: 30px;
-font-family: "klavica";
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 list-style-position: inside;
 padding-bottom: 30px;
 `

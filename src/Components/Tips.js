@@ -9,7 +9,7 @@ function Tips() {
                 <H2>New to Climbing? Follow along to get started!</H2>
                 <OL>Climbing Tips
                     <LI>Find a local climbing gym! The community is very friendly.</LI>
-                    <LI>Try out some gear to figure out what you like. The most important items are harness, shoes, and a chalkbag!</LI>
+                    <LI>Try out some gear to figure out what you like. The most important items are a harness, shoes, and a chalkbag!</LI>
                     <LI>If you plan on climbing outside, make sure to buy a helmet!</LI>
                     <LI>Start on easy climbs, which are generally rated around 5.6-5.8 indoors!</LI>
                     <LI>If you cannot find an experienced friend to take you, consider hiring a guide!</LI>
