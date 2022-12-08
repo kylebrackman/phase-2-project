@@ -35,7 +35,7 @@ font-family: "klavica";
 `
 export const P1 = styled.p`
 color: white;
-font-size: 25px;
+font-size: 20px;
 font-family: "klavica";
 /* display: 'flex';
 justify-Content: 'center';
