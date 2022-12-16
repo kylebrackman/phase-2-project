@@ -9,7 +9,7 @@ ClimbTalk.com is a website that is built for climbers to spread information abou
 The home page greets the user with whatever name they entered into the login input.
 
 ### Climbs Page
-Within the Climbs page, the user can read up on recent climb submissions made by other climbers. The information currently includes the climb name, description, and a grade of the climb that the user feels is accurate. The climb name and description inputs are both used using ***controlled components***, which is defined as a form that derives it's input values from state. 
+Within the Climbs page, the user can read up on recent climb submissions made by other climbers. The information currently includes the climb name, description, and a grade of the climb that the user feels is accurate. The climb name and description inputs are both used using a ***controlled component***, which is defined as a form that derives it's input values from state. 
 
 After submitting, the new climb will post to the bottom of the climbs list, and form will reset so that the user can post another if they'd like.
 
