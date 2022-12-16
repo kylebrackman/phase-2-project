@@ -21,4 +21,4 @@ The tips page has five tips that can help new climbers get started. This include
 The about page provides a brief explanation of ClimbTalk.com to new users.
 
 #### Gear Photos
-Credit to arcteryx.com, us.scarpa.com, and blackdiamond.com for photos of the harness, shoes, and helmet on the Tips page. 
+Credit to arcteryx.com, us.scarpa.com, and blackdiamondequipment.com for photos of the harness, shoes, and helmet on the Tips page. 
