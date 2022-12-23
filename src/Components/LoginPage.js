@@ -28,7 +28,7 @@ function LoginPage({ handleLogIn, userName, setUserName }) {
                         borderBottom: "3px solid black",
                         paddingBottom: "10px",
                         marginBottom: "12px",
-                    }}>Enter a User Name to Log In!</H2>
+                    }}>Enter Any User Name to Log In!</H2>
                 <H3
                     style={{
                         display: 'flex',

@@ -40,7 +40,7 @@ function ClimbsPage({ climbList, handleAddClimb }) {
     });
 
     return (
-        <div 
+        <div
         >
             <H2 style={headerStyling}>🏔Submit a New Climb!🏔</H2>
             <div style={{ divStyling, borderBottom: "3px solid black" }}>

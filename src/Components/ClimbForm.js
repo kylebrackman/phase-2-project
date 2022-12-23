@@ -21,9 +21,9 @@ function ClimbForm({ onAddClimb }) {
         })
             .then(res => res.json())
             .then((newClimb) => onAddClimb(newClimb))
-            setClimbName('')
-            setDescription('')
-            setSelectedGrade("Grade")
+        setClimbName('')
+        setDescription('')
+        setSelectedGrade("Grade")
     }
 
     return (
