@@ -4,17 +4,6 @@
 ## Introduction
 ClimbTalk.com is a website that is built for climbers to spread information about climbs they complete. After entering in a username, the user is greeted with a 'Hello, [userName]!', and the navbar options. The user can then navigate to any of the Climbs, Tips, or About page!
 
-## Component Structure
-App
-    - Navbar
-    - ClimbsPage
-        - ClimbForm
-    - About
-    - Tips
-    - Home
-    - LoginPage
-
-
 ### Home Page
 The home page greets the user with whatever name they entered into the login input.
 
